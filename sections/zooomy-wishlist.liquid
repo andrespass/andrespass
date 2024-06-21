@@ -1,0 +1,28 @@
+{% unless section.settings.full_width %}<div class="article">{% endunless %}
+  <div class="container cf" data-cc-animate>
+    <div class="page-header cf">
+      <h1 class="majortitle">{{ page.title }}</h1>
+    </div>
+    <div class="rte">
+     {{page.content}} <div  id='ZoomyWishlistPage'></div><script src='https://zooomyapps.com/wishlist/ListWishlist.js' data-shop-id='{{shop.permanent_domain}}' data-customer-id='{{customer.id}}' data-customer-email='{{customer.email}}' ></script>
+
+    </div>
+  </div>
+{% unless section.settings.full_width %}</div>{% endunless %}
+
+
+{% schema %}
+  {
+    "name": "Page",
+    "class": "page-section-spacing",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full width",
+        "default": false
+      }
+    ]
+  }
+{% endschema %}
+
